@@ -7,6 +7,14 @@
 
 function countVowels(str) {
     // Your code here
+   let cleanstr=str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+   let count=0;
+    for(let i=0;i<=cleanstr.length;i++){
+      if(cleanstr[i]=='a'|cleanstr[i]=='e'|cleanstr[i]=='i'|cleanstr[i]=='o'|cleanstr[i]=='u'){
+        count++
+      }
+    }
+    return count
 }
 
 module.exports = countVowels;
